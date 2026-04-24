@@ -1,374 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohoshin Ara Tahera — Researcher</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohoshin Ara Tahera — Graduate Researcher in Federated Learning, Trustworthy AI, and Network Security at UL Lafayette.">
+  <meta name="author" content="Mohoshin Ara Tahera">
+  <title>Mohoshin Ara Tahera · Researcher</title>
+
+  <!-- Fonts: Fraunces (editorial serif), Inter (clean sans), JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">M. A. Tahera</a>
-            <div class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#publications">Publications</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-            </button>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Mohoshin Ara Tahera</a>
+      <div class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <!-- <div class="hero__status">
+            <span class="hero__status-dot"></span>
+            Applying — Fall 2026 PhD Cycle
+          </div> -->
+          <h1 class="hero__name">Mohoshin Ara<br>Tahera<em>.</em></h1>
+          <p class="hero__tagline">
+            Graduate researcher building <strong>privacy-preserving federated learning systems</strong> for healthcare and intelligent transportation. I work at the intersection of trustworthy AI, system-level ML engineering, and proactive cyber defense at the AI&nbsp;CyberSafe Innovations Lab, University of Louisiana at Lafayette.
+          </p>
+          <div class="hero__links">
+            <a href="mailto:tashfinionta@gmail.com" class="hero__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 4 10 8 10-8"/></svg>
+              Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=esFvn18AAAAJ&hl=en" class="hero__link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM1 8l11-7 11 7v2H1V8z"/></svg>
+              Scholar
+            </a>
+            <a href="https://linkedin.com/in/mohoshin-ara-tahera" class="hero__link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/Nionta" class="hero__link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="assets/Tahera_CV.pdf" class="hero__link" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              CV
+            </a>
+          </div>
         </div>
-    </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>Mohoshin Ara<br>Tahera</h1>
-                    <p class="tagline">Graduate Researcher in Federated Learning, Trustworthy AI, and Network Security at the AI&nbsp;CyberSafe Innovations&nbsp;Lab, University of Louisiana at Lafayette.</p>
-                    <div class="hero-links">
-                        <a href="mailto:tashfinionta@gmail.com" class="hero-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                <path d="m2 4 10 8 10-8"/>
-                            </svg>
-                            Email
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=esFvn18AAAAJ&hl=en" class="hero-link" target="_blank">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM1 8l11-7 11 7v2H1V8z"/>
-                            </svg>
-                            Scholar
-                        </a>
-                        <a href="https://linkedin.com/in/mohoshin-ara-tahera" class="hero-link" target="_blank">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
-                            </svg>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/Nionta" class="hero-link" target="_blank">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-photo">
-                    <!-- <div class="ph">Your photo here</div> -->
-                    <img src="assets/profile.jpg" alt="Mohoshin Ara Tahera">
-                </div>
-            </div>
+        <div class="hero__portrait">
+          <div class="hero__portrait-inner">
+            <!-- Replace the src below with the actual profile image path -->
+            <img src="assets/profile.jpg" alt="Mohoshin Ara Tahera"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;hero__portrait-placeholder&quot;>Photo</div>';">
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="about reveal" id="about">
-        <div class="container">
-            <span class="mono-label">About</span>
-            <h2 class="sec-title">Background</h2>
-            <div class="about-body">
-                <p>I am a Graduate Research Assistant at the <strong>University of Louisiana at Lafayette</strong>, working in the <strong>AI CyberSafe Innovations Lab</strong> under the supervision of Dr. Shuvalaxmi Dass. My research focuses on building privacy-preserving federated learning systems for healthcare and intelligent transportation, studying privacy threats and defenses for large language models in clinical deployments, and designing proactive network defense mechanisms using software-defined networking and game theory.</p>
-                <p>My published and under-review work spans systematizing the privacy landscape of federated fine-tuning for healthcare LLMs &mdash; characterizing adversary types, attack surfaces (gradient leakage, client update exposure, communication interception), and layered defenses (differential privacy, secure aggregation, split learning, randomized LoRA). I have also developed a blockchain-secured federated transformer framework for real-time object detection in intelligent transportation systems, achieving 89.20% mAP@0.5 under missing-class Non-IID conditions while reducing encoder FLOPs by 47.8%. My earlier work introduced a genetic algorithm-based approach for image steganography with cryptographic data hiding.</p>
-                <p>Before graduate school, I spent over four years as a <strong>Data Engineer at Grameenphone</strong> (Telenor Group), Bangladesh&rsquo;s largest telecom operator serving 80M+ subscribers. There, I engineered distributed data pipelines on Oracle Exadata, Hadoop, and Spark for ML feature engineering over 50M+ records, built predictive analytics for customer churn, and developed real-time BI dashboards and mobile applications &mdash; infrastructure experience directly applicable to scaling federated learning systems.</p>
-            </div>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+       ═══════════════════════════════════════════ -->
+  <section class="about reveal" id="about">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h2 class="section-title">A researcher in <em>trustworthy systems</em>.</h2>
+      <div class="about__body">
+        <p>
+          I am a <strong>Graduate Research Assistant</strong> at the <strong>University of Louisiana at Lafayette</strong>, working in the AI&nbsp;CyberSafe Innovations Lab under the supervision of Dr.&nbsp;Shuvalaxmi&nbsp;Dass. My research sits at the intersection of <em>privacy-preserving machine learning</em>, <em>federated systems</em>, and <em>proactive cyber defense</em>, with applications in healthcare and intelligent transportation.
+        </p>
+        <p>
+          My published and under-review work systematizes the privacy landscape of federated fine-tuning for healthcare large language models &mdash; characterizing adversary types, attack surfaces, and layered defenses across the full LLM lifecycle. I have also developed a blockchain-secured federated transformer framework for real-time object detection in intelligent transportation systems, and I am designing network Moving Target Defense evaluation testbeds combining SDN, game theory, and adversarial modeling.
+        </p>
+        <p>
+          Before graduate school, I spent over four years as a <strong>Data Engineer at Grameenphone</strong> (Telenor Group), Bangladesh&rsquo;s largest telecom operator serving 80M+ subscribers. That experience gave me a deep grounding in distributed data systems at production scale &mdash; infrastructure expertise that directly informs how I reason about federated learning deployments today.
+        </p>
+        <!-- <p>
+          I am applying to PhD programs for <strong>Fall 2026</strong> and looking for research groups that value both theoretical rigor and system-level engineering in trustworthy AI.
+        </p> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       RESEARCH AREAS
+       ═══════════════════════════════════════════ -->
+  <section class="research-areas reveal" id="research">
+    <div class="container">
+      <span class="eyebrow">Research Themes</span>
+      <h2 class="section-title">Four threads of <em>inquiry</em>.</h2>
+      <div class="areas__grid">
+        <div class="area-tile">
+          <div class="area-tile__num">01 / Theme</div>
+          <h3 class="area-tile__title">Privacy-Preserving Federated Learning</h3>
+          <p class="area-tile__desc">Systematizing attack surfaces and layered defenses in federated fine-tuning of clinical LLMs and medical imaging systems.</p>
         </div>
-    </section>
-
-    <!-- <section class="news reveal" id="news">
-        <div class="container">
-            <span class="mono-label">Updates</span>
-            <h2 class="sec-title">Recent Activity</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-date">Jun 2025</div>
-                    <div class="news-body">Submitted first-author paper on <strong>Privacy-Preserving FL for Healthcare LLMs</strong> to IEEE CSR 2026.</div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">May 2025</div>
-                    <div class="news-body">Submitted first-author paper on <strong>BlockSecRT-DETR: Blockchain-Secured Federated Transformers for ITS</strong> to IEEE VTC 2026.</div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">2025</div>
-                    <div class="news-body">First-author SoK on <strong>privacy-aware LLMs in healthcare</strong> covering threat models across preprocessing, fine-tuning, and inference &mdash; in revision.</div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">Feb 2025</div>
-                    <div class="news-body">Began position as <strong>Graduate Research Assistant</strong> at the AI CyberSafe Innovations Lab.</div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">Aug 2024</div>
-                    <div class="news-body">Started <strong>Graduate Study in Computer Science</strong> at UL Lafayette.</div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">2018</div>
-                    <div class="news-body">Published undergraduate thesis on <strong>Image Steganography Using Genetic Algorithms</strong>.</div>
-                </div>
-            </div>
+        <div class="area-tile">
+          <div class="area-tile__num">02 / Theme</div>
+          <h3 class="area-tile__title">System-Level ML Engineering</h3>
+          <p class="area-tile__desc">Building federated pipelines that handle non-IID data, modality heterogeneity, edge latency, and Byzantine participants.</p>
         </div>
-    </section> -->
-
-    <section class="publications reveal" id="publications">
-        <div class="container">
-            <span class="mono-label">Research Output</span>
-            <h2 class="sec-title">Publications &amp; Manuscripts</h2>
-            <ol class="pub-list">
-                <li class="pub-item">
-                    <span class="pub-num">[1]</span>
-                    <div>
-                        <div class="pub-title">SoK: Privacy Threats, Defenses, and Challenges in Federated Fine-Tuning of Healthcare LLMs</div>
-                        <div class="pub-meta"><span class="me">M. A. Tahera</span>, S. Dass &middot; Accepted, <strong>IEEE International Conference on Cyber Security and Resilience 2026</strong><span class="pub-tag first">First Author</span></div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <span class="pub-num">[2]</span>
-                    <div>
-                        <div class="pub-title">SoK: Privacy-aware LLM in Healthcare: Threat Model, Privacy Techniques, Challenges and Recommendations</div>
-                        <div class="pub-meta"><span class="me">M. A. Tahera</span>, K. S. Sidhu, S. Dass, S. Saha &middot; In revision<span class="pub-tag first">First Author</span></div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <span class="pub-num">[3]</span>
-                    <div>
-                        <div class="pub-title">BlockSecRT-DETR: Secure and Efficient Federated Transformers for Real-Time Object Detection in ITS</div>
-                        <div class="pub-meta"><span class="me">M. A. Tahera</span>, S. Rahman, S. Dass, S. Ullah, M. Abouyoussef &middot; Accepted, <strong>IEEE Vehicular Technology Conference 2026</strong><span class="pub-tag first">First Author</span></div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <span class="pub-num">[4]</span>
-                    <div>
-                        <div class="pub-title">MTD-Playground: An Attacker-Aware Evaluation Framework for Network Moving Target Defense</div>
-                        <div class="pub-meta"><span class="me">M. A. Tahera</span>, et al. &middot; In preparation<span class="pub-tag second">Second Author</span></div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <span class="pub-num">[5]</span>
-                    <div>
-                        <div class="pub-title">An Improved Data Hiding Technique in Image Steganography Using Genetic Algorithm</div>
-                        <div class="pub-meta"><span class="me">M. A. Tahera</span>, A. Das, S. Mondal &middot; Published, Khulna University (2018)<span class="pub-tag first">First Author</span></div>
-                    </div>
-                </li>
-            </ol>
+        <div class="area-tile">
+          <div class="area-tile__num">03 / Theme</div>
+          <h3 class="area-tile__title">Proactive Cyber Defense</h3>
+          <p class="area-tile__desc">SDN-based Moving Target Defense, game-theoretic attacker modeling, and adversarial evaluation frameworks.</p>
         </div>
-    </section>
-
-    <section class="experience reveal" id="experience">
-        <div class="container">
-            <span class="mono-label">Background</span>
-            <h2 class="sec-title">Research &amp; Industry Experience</h2>
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <div class="exp-role">Graduate Research Assistant</div>
-                    <div class="exp-period">Feb 2025 &ndash; Present</div>
-                </div>
-                <div class="exp-org">AI CyberSafe Innovations Lab, University of Louisiana at Lafayette</div>
-                <span class="exp-type research">Research</span>
-                <ul class="exp-bullets">
-                    <li>Authored a Systematization of Knowledge (SoK) paper on privacy threats in federated fine-tuning of healthcare LLMs, characterizing attack surfaces including gradient leakage, client update exposure, and communication interception across three pipeline stages.</li>
-                    <li>Developed a comprehensive phase-aware SoK covering the full LLM lifecycle in healthcare, with detailed threat models mapping adversary capabilities to enabled attacks.</li>
-                    <li>Designed BlockSecRT-DETR, a blockchain-secured federated RT-DETR framework for real-time ITS object detection.</li>
-                    <li>Engineered a decentralized update validation mechanism using round-scoped linkable group signatures for anonymous authenticated client participation.</li>
-                    <li>Designing MTD-Playground, an enterprise-style SDN testbed using Containernet, Open vSwitch, and ONOS controller.</li>
-                    <li>Deploying distributed training infrastructure on the LONI HPC cluster (SLURM, PyTorch) with custom NPZ DataLoader pipelines.</li>
-                </ul>
-            </div>
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <div class="exp-role">Graduate Teaching Assistant &mdash; Software Methodology</div>
-                    <div class="exp-period">Aug 2024 &ndash; Feb 2025</div>
-                </div>
-                <div class="exp-org">University of Louisiana at Lafayette</div>
-                <span class="exp-type teaching">Teaching</span>
-                <ul class="exp-bullets">
-                    <li>Mentored 40+ undergraduates in software engineering projects, code review, debugging, and technical documentation.</li>
-                    <li>Developed assessment rubrics and guided student research presentations on software design patterns and testing methodologies.</li>
-                </ul>
-            </div>
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <div class="exp-role">BI Developer &amp; Data Engineer</div>
-                    <div class="exp-period">Feb 2020 &ndash; Aug 2024</div>
-                </div>
-                <div class="exp-org">Grameenphone (Telenor Group) &middot; Dhaka, Bangladesh &middot; 80M+ subscribers &middot; 4.5 years</div>
-                <span class="exp-type industry">Industry</span>
-                <ul class="exp-bullets">
-                    <li>Engineered distributed data pipelines on Oracle Exadata, Hadoop, and Spark for ML feature engineering over 50M+ subscriber records.</li>
-                    <li>Architected predictive analytics models for customer churn reduction and retailer stockout forecasting.</li>
-                    <li>Reduced complex reporting overhead by 57% through end-to-end data automation and pipeline consolidation using SQL and Qlik Sense.</li>
-                    <li>Developed in-house iOS and Android mobile applications (Swift, React Native) and real-time web dashboards (PHP, JavaScript).</li>
-                    <li>Built customer segmentation tools for targeted micro-campaign generation across 80M+ subscriber base.</li>
-                    <li>Conducted R&amp;D on data streaming architectures, big data tooling, and emerging BI technologies.</li>
-                </ul>
-            </div>
-
-            <div class="exp-card">
-                <div class="exp-header">
-                    <div class="exp-role">Software Engineer</div>
-                    <div class="exp-period">May 2018 &ndash; Feb 2020</div>
-                </div>
-                <div class="exp-org">Shiram System Solutions &middot; Khulna, Bangladesh</div>
-                <span class="exp-type industry">Industry</span>
-                <ul class="exp-bullets">
-                    <li>Developed enterprise web applications using Laravel (PHP) for commercial and government clients, including internal systems for the Bangladesh Army.</li>
-                </ul>
-            </div>
+        <div class="area-tile">
+          <div class="area-tile__num">04 / Theme</div>
+          <h3 class="area-tile__title">Applied Cryptography</h3>
+          <p class="area-tile__desc">Cryptographic primitives for trustworthy ML &mdash; group signatures, BFT consensus, and information-hiding schemes.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="skills reveal" id="skills">
-        <div class="container">
-            <span class="mono-label">Toolkit</span>
-            <h2 class="sec-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4 class="c1">Languages</h4>
-                    <div class="stags s1">
-                        <span>Python</span><span>Java</span><span>C/C++</span><span>SQL</span><span>Bash</span><span>PHP</span><span>JavaScript</span><span>Swift</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h4 class="c2">ML &amp; AI</h4>
-                    <div class="stags s2">
-                        <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Hugging Face</span><span>Flower/PySyft</span><span>Deep RL</span><span>RT-DETR</span><span>ViT</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h4 class="c3">Networking &amp; Security</h4>
-                    <div class="stags s3">
-                        <span>ONOS</span><span>OpenFlow</span><span>Open vSwitch</span><span>Mininet</span><span>Containernet</span><span>Nmap</span><span>Wireshark</span><span>Blockchain</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h4 class="c4">Distributed Systems</h4>
-                    <div class="stags s4">
-                        <span>Hadoop</span><span>Spark</span><span>Oracle Exadata</span><span>AWS</span><span>Docker</span><span>Qlik Sense</span><span>SLURM/HPC</span><span>LONI</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h4 class="c5">Dev Tools</h4>
-                    <div class="stags s5">
-                        <span>Git</span><span>Linux</span><span>Flask</span><span>Laravel</span><span>React Native</span><span>ONNX</span><span>LaTeX</span><span>MATLAB</span>
-                    </div>
-                </div>
+
+  <!-- ═══════════════════════════════════════════
+       PUBLICATIONS
+       ═══════════════════════════════════════════ -->
+  <section class="publications reveal" id="publications">
+    <div class="container">
+      <span class="eyebrow">Research Output</span>
+      <h2 class="section-title">Publications &amp; <em>manuscripts</em>.</h2>
+
+      <ol class="pub-list">
+
+        <li class="pub-item">
+          <span class="pub__num">[01]</span>
+          <div>
+            <h3 class="pub__title">SoK: Privacy Threats, Defenses, and Challenges in Federated Fine-Tuning of Healthcare LLMs</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, S. Dass
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--accepted">Accepted</span>
+              <strong>IEEE International Conference on Cyber Security &amp; Resilience, 2026</strong>
+              <span class="pub__role">First Author</span>
             </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub__num">[02]</span>
+          <div>
+            <h3 class="pub__title">SoK: Privacy-Aware LLMs in Healthcare &mdash; Threat Model, Privacy Techniques, Challenges, and Recommendations</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, K. S. Sidhu, S. Dass, S. Saha
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--revision">In Revision</span>
+              <span class="pub__role">First Author</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub__num">[03]</span>
+          <div>
+            <h3 class="pub__title">BlockSecRT-DETR: Secure and Efficient Federated Transformers for Real-Time Object Detection in ITS</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, S. Rahman, S. Dass, S. Ullah, M. Abouyoussef
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--accepted">Accepted</span>
+              <strong>IEEE Vehicular Technology Conference, 2026</strong>
+              <span class="pub__role">First Author</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub__num">[04]</span>
+          <div>
+            <h3 class="pub__title">Federated Multimodal Bottleneck Transformer for Privacy-Preserving Ophthalmic Disease Detection</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, et al.
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--prep">In Preparation</span>
+              <span class="pub__role">First Author</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub__num">[05]</span>
+          <div>
+            <h3 class="pub__title">MTD-Playground: An Attacker-Aware Evaluation Framework for Network Moving Target Defense</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, et al.
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--prep">In Preparation</span>
+              <span class="pub__role">Second Author</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub__num">[06]</span>
+          <div>
+            <h3 class="pub__title">An Improved Data Hiding Technique in Image Steganography Using Genetic Algorithm</h3>
+            <p class="pub__authors">
+              <span class="me">M. A. Tahera</span>, A. Das, S. Mondal
+            </p>
+            <div class="pub__venue">
+              <span class="pub__tag pub__tag--published">Published</span>
+              <strong>Khulna University, 2018</strong>
+              <span class="pub__role">First Author</span>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+       ═══════════════════════════════════════════ -->
+  <section class="experience reveal" id="experience">
+    <div class="container">
+      <span class="eyebrow">Background</span>
+      <h2 class="section-title">Research &amp; <em>industry</em> experience.</h2>
+
+      <div class="exp-card">
+        <div class="exp-card__header">
+          <h3 class="exp-card__role">Graduate Research Assistant</h3>
+          <span class="exp-card__period">Feb 2025 &mdash; Present</span>
         </div>
-    </section>
+        <div class="exp-card__org">AI CyberSafe Innovations Lab &middot; University of Louisiana at Lafayette</div>
+        <span class="exp-card__type exp-card__type--research">Research</span>
+        <ul class="exp-card__bullets">
+          <li>Authored a Systematization of Knowledge (SoK) paper on privacy threats in federated fine-tuning of healthcare LLMs, characterizing attack surfaces including gradient leakage, client update exposure, and communication interception across three pipeline stages.</li>
+          <li>Developed a comprehensive phase-aware SoK covering the full LLM lifecycle in healthcare, with detailed threat models mapping adversary capabilities to enabled attacks across data preprocessing, federated fine-tuning, and inference.</li>
+          <li>Designed BlockSecRT-DETR, a blockchain-secured federated RT-DETR framework for real-time ITS object detection with token engineering, round-scoped group signatures, and PBFT consensus for Byzantine-fault-tolerant aggregation.</li>
+          <li>Designing a federated multimodal learning framework for privacy-preserving ophthalmic disease detection across hospitals with heterogeneous imaging equipment &mdash; evaluated on Harvard-FairVision30k with demographic fairness analysis.</li>
+          <li>Building MTD-Playground, an enterprise-style SDN testbed (Containernet, Open vSwitch, ONOS) for benchmarking Moving Target Defense strategies under multi-stage attack campaigns.</li>
+          <li>Deploying distributed training infrastructure on the LONI HPC cluster (SLURM, PyTorch, CUDA) with custom data-loading pipelines for large-scale federated experiments.</li>
+        </ul>
+      </div>
 
-    <section class="projects reveal" id="projects">
-        <div class="container">
-            <span class="mono-label">Portfolio</span>
-            <h2 class="sec-title">Selected Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-thumb">
-                        <img src="assets/blovksec.png" alt="block">
-                    </div>
-                    <div class="project-body">
-                        <h3>BlockSecRT-DETR: Blockchain-Secured Federated Object Detection</h3>
-                        <p>Blockchain-secured federated RT-DETR framework for ITS. Token Engineering Module reduces encoder FLOPs by 47.8% and inference latency by 17.2%.</p>
-                        <div class="project-tags"><span>RT-DETR</span><span>Federated Learning</span><span>Blockchain</span><span>KITTI</span><span>PyTorch</span><span>PBFT</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-thumb"><span class="ph">Project thumbnail</span></div>
-                    <div class="project-body">
-                        <h3>SoK: Privacy in Federated Fine-Tuning of Healthcare LLMs</h3>
-                        <p>Systematization of privacy risks across the federated training pipeline: client-side defenses, secure aggregation with blockchain integrity, and communication-layer strategies.</p>
-                        <div class="project-tags"><span>LLM Privacy</span><span>Federated Learning</span><span>Healthcare</span><span>Differential Privacy</span><span>Threat Modeling</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-thumb"><span class="ph">Project thumbnail</span></div>
-                    <div class="project-body">
-                        <h3>SoK: Privacy-Aware LLMs in Healthcare &mdash; Full Lifecycle</h3>
-                        <p>Phase-aware SoK covering data preprocessing, federated fine-tuning, and inference. Maps attack surfaces to defenses to limitations across adversary capability gradients.</p>
-                        <div class="project-tags"><span>LLM</span><span>EHR/FHIR</span><span>Threat Model</span><span>HIPAA/GDPR</span><span>Secure Aggregation</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-thumb"><span class="ph">Project thumbnail</span></div>
-                    <div class="project-body">
-                        <h3>MTD-Playground: Network Moving Target Defense Framework</h3>
-                        <p>Enterprise-style SDN testbed for benchmarking MTD strategies under multi-stage attack campaigns. Supports game-theoretic, AI/ML-driven, and SDN-based path randomization.</p>
-                        <div class="project-tags"><span>SDN</span><span>ONOS</span><span>Containernet</span><span>Game Theory</span><span>Open vSwitch</span><span>Python</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-thumb"><span class="ph">Project thumbnail</span></div>
-                    <div class="project-body">
-                        <h3>Image Steganography Using Genetic Algorithm</h3>
-                        <p>GA-based steganographic system with cryptographic K-bit security key integration. Uses GA-driven chromosome selection for optimal embedding position.</p>
-                        <div class="project-tags"><span>Genetic Algorithm</span><span>MATLAB</span><span>Cryptography</span><span>PSNR/MSE</span><span>LSB Steganography</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-thumb"><span class="ph">Project thumbnail</span></div>
-                    <div class="project-body">
-                        <h3>Federated Vision Transformers for Pneumonia Detection</h3>
-                        <p>Federated ViT framework for chest X-ray pneumonia detection enabling collaborative training under non-IID distributions with differential privacy budget analysis.</p>
-                        <div class="project-tags"><span>Vision Transformer</span><span>Federated Learning</span><span>Differential Privacy</span><span>Medical Imaging</span></div>
-                    </div>
-                </div>
-
-            </div>
+      <div class="exp-card">
+        <div class="exp-card__header">
+          <h3 class="exp-card__role">Graduate Teaching Assistant &mdash; Software Methodology</h3>
+          <span class="exp-card__period">Aug 2024 &mdash; Feb 2025</span>
         </div>
-    </section>
+        <div class="exp-card__org">University of Louisiana at Lafayette</div>
+        <span class="exp-card__type exp-card__type--teaching">Teaching</span>
+        <ul class="exp-card__bullets">
+          <li>Mentored 40+ undergraduates in software engineering projects, code review, debugging, and technical documentation.</li>
+          <li>Developed assessment rubrics and guided student research presentations on software design patterns and testing methodologies.</li>
+        </ul>
+      </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-text">
-                    <h3>Let&rsquo;s Connect</h3>
-                    <p>Open to research collaborations and discussions on federated learning, trustworthy AI, and network security. Feel free to reach out.</p>
-                </div>
-                <div class="footer-actions">
-                    <a href="Mohoshin_Ara_Tahera_PhD_CV.pdf" class="btn-cv" download>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                        Download CV
-                    </a>
-                    <a href="mailto:tashfinionta@gmail.com" class="btn-email">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
-                            <rect x="2" y="4" width="20" height="16" rx="2"/>
-                            <path d="m2 4 10 8 10-8"/>
-                        </svg>
-                        Email Me
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>&copy; 2025 Mohoshin Ara Tahera</span>
-                <span>
-                    <a href="https://scholar.google.com/citations?user=esFvn18AAAAJ&hl=en" target="_blank">Scholar</a> &middot; 
-                    <a href="https://linkedin.com/in/mohoshin-ara-tahera" target="_blank">LinkedIn</a> &middot; 
-                    <a href="https://github.com/Nionta" target="_blank">GitHub</a>
-                </span>
-            </div>
+      <div class="exp-card">
+        <div class="exp-card__header">
+          <h3 class="exp-card__role">BI Developer &amp; Data Engineer</h3>
+          <span class="exp-card__period">Feb 2020 &mdash; Aug 2024</span>
         </div>
-    </footer>
+        <div class="exp-card__org">Grameenphone (Telenor Group) &middot; Dhaka, Bangladesh &middot; 80M+ subscribers &middot; 4.5 years</div>
+        <span class="exp-card__type exp-card__type--industry">Industry</span>
+        <ul class="exp-card__bullets">
+          <li>Engineered distributed data pipelines on Oracle Exadata, Hadoop, and Spark for ML feature engineering over 50M+ subscriber records &mdash; infrastructure experience directly applicable to scaling federated learning systems.</li>
+          <li>Architected predictive analytics models for customer churn reduction and retailer stockout forecasting, informing enterprise-wide retention and supply chain strategy.</li>
+          <li>Reduced complex reporting overhead by 57% through end-to-end data automation and pipeline consolidation using SQL and Qlik Sense.</li>
+          <li>Developed in-house iOS and Android mobile applications (Swift, React Native) and real-time web dashboards (PHP, JavaScript) for executive decision-making.</li>
+          <li>Built customer segmentation tools for targeted micro-campaign generation across the 80M+ subscriber base, enabling data-driven marketing optimization.</li>
+          <li>Conducted R&amp;D on data streaming architectures, big data tooling, and emerging BI technologies across distributed infrastructure.</li>
+        </ul>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="exp-card">
+        <div class="exp-card__header">
+          <h3 class="exp-card__role">Software Engineer</h3>
+          <span class="exp-card__period">May 2018 &mdash; Feb 2020</span>
+        </div>
+        <div class="exp-card__org">Shiram System Solutions &middot; Khulna, Bangladesh</div>
+        <span class="exp-card__type exp-card__type--industry">Industry</span>
+        <ul class="exp-card__bullets">
+          <li>Developed enterprise web applications using Laravel (PHP) for commercial and government clients, including internal systems for the Bangladesh Army.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+       ═══════════════════════════════════════════ -->
+  <section class="skills reveal">
+    <div class="container">
+      <span class="eyebrow">Toolkit</span>
+      <h2 class="section-title">Technical <em>skills</em>.</h2>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <h4 class="skill-card__title">Languages</h4>
+          <div class="skill-card__tags">
+            <span>Python</span><span>Java</span><span>C/C++</span><span>SQL</span>
+            <span>Bash</span><span>PHP</span><span>JavaScript</span><span>Swift</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4 class="skill-card__title">ML &amp; AI</h4>
+          <div class="skill-card__tags">
+            <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Hugging Face</span>
+            <span>Flower</span><span>PySyft</span><span>Vision Transformers</span><span>RT-DETR</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4 class="skill-card__title">Networking &amp; Security</h4>
+          <div class="skill-card__tags">
+            <span>ONOS</span><span>OpenFlow</span><span>Open vSwitch</span><span>Mininet</span>
+            <span>Containernet</span><span>Blockchain</span><span>Nmap</span><span>Wireshark</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4 class="skill-card__title">Distributed Systems</h4>
+          <div class="skill-card__tags">
+            <span>Hadoop</span><span>Spark</span><span>Oracle Exadata</span><span>AWS</span>
+            <span>Docker</span><span>SLURM/HPC</span><span>LONI</span><span>Qlik Sense</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4 class="skill-card__title">Dev Tools</h4>
+          <div class="skill-card__tags">
+            <span>Git</span><span>Linux</span><span>Flask</span><span>Laravel</span>
+            <span>React Native</span><span>ONNX</span><span>LaTeX</span><span>MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+       ═══════════════════════════════════════════ -->
+  <section class="projects reveal" id="projects">
+    <div class="container">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="section-title">Selected <em>projects</em>.</h2>
+      <div class="projects__grid">
+
+        <!-- Featured: FedMBT flagship ongoing -->
+        <article class="project-card project-card--featured">
+          <!-- <span class="project-card__featured-badge"></span> -->
+          <div class="project-card__thumb project-card__thumb--pattern">
+            <span class="project-card__thumb-icon">⟡</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">FedMBT &mdash; Federated Multimodal Bottleneck Transformer</h3>
+            <p class="project-card__desc">
+              Federated learning framework for privacy-preserving ophthalmic disease detection across hospitals with heterogeneous imaging equipment. Evaluated on Harvard-FairVision30k with comprehensive demographic fairness analysis.
+            </p>
+            <div class="project-card__tags">
+              <span>Federated Learning</span><span>Multimodal</span><span>Medical AI</span><span>Fairness</span><span>PyTorch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb">
+            <img src="assets/blocksec.png" alt="BlockSecRT-DETR"
+                 onerror="this.parentElement.classList.add('project-card__thumb--pattern'); this.outerHTML='<span class=&quot;project-card__thumb-icon&quot;>◆</span>';">
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">BlockSecRT-DETR &mdash; Blockchain-Secured Federated Detection</h3>
+            <p class="project-card__desc">
+              Federated RT-DETR framework with Token Engineering Module. Reduces encoder FLOPs by 47.8% and inference latency by 17.2%, with PBFT consensus and group-signature authentication across RSU nodes.
+            </p>
+            <div class="project-card__tags">
+              <span>RT-DETR</span><span>Federated Learning</span><span>Blockchain</span><span>KITTI</span><span>PBFT</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--pattern">
+            <span class="project-card__thumb-icon">⬢</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">SoK &mdash; Privacy in Federated Fine-Tuning of Healthcare LLMs</h3>
+            <p class="project-card__desc">
+              Systematization of privacy risks across the federated training pipeline: client-side defenses (DP, SMPC, split learning), secure aggregation, and communication-layer strategies for clinical LLM deployments.
+            </p>
+            <div class="project-card__tags">
+              <span>LLM Privacy</span><span>Federated Learning</span><span>Healthcare</span><span>Differential Privacy</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--pattern">
+            <span class="project-card__thumb-icon">◈</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">SoK &mdash; Privacy-Aware LLMs in Healthcare (Full Lifecycle)</h3>
+            <p class="project-card__desc">
+              Phase-aware SoK covering data preprocessing, federated fine-tuning, and inference. Maps attack surfaces to defenses across adversary capability gradients and regulatory constraints.
+            </p>
+            <div class="project-card__tags">
+              <span>LLM</span><span>EHR/FHIR</span><span>Threat Model</span><span>HIPAA/GDPR</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--pattern">
+            <span class="project-card__thumb-icon">⬡</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">MTD-Playground &mdash; Network Moving Target Defense Framework</h3>
+            <p class="project-card__desc">
+              Enterprise-style SDN testbed for benchmarking MTD strategies under multi-stage attack campaigns. Supports game-theoretic, AI/ML-driven, and SDN-based path randomization defense evaluation.
+            </p>
+            <div class="project-card__tags">
+              <span>SDN</span><span>ONOS</span><span>Containernet</span><span>Game Theory</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--pattern">
+            <span class="project-card__thumb-icon">◊</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Image Steganography Using Genetic Algorithm</h3>
+            <p class="project-card__desc">
+              GA-based steganographic system with cryptographic K-bit security key integration. Uses GA-driven chromosome selection for optimal embedding position with measurable PSNR/MSE improvements.
+            </p>
+            <div class="project-card__tags">
+              <span>Genetic Algorithm</span><span>MATLAB</span><span>Cryptography</span><span>PSNR/MSE</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER / CONTACT
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <h3 class="footer__heading">Let's <em>connect</em>.</h3>
+          <p class="footer__text">
+            Open to research collaborations and conversations on federated learning, trustworthy AI, and network security. If my work resonates with yours, please reach out.
+          </p>
+        </div>
+        <div class="footer__actions">
+          <a href="assets/Tahera_CV.pdf" class="btn btn--primary" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="mailto:tashfinionta@gmail.com" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 4 10 8 10-8"/></svg>
+            Email Me
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 Mohoshin Ara Tahera</span>
+        <span>
+          <a href="https://scholar.google.com/citations?user=esFvn18AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+          &middot;
+          <a href="https://linkedin.com/in/mohoshin-ara-tahera" target="_blank" rel="noopener">LinkedIn</a>
+          &middot;
+          <a href="https://github.com/Nionta" target="_blank" rel="noopener">GitHub</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
