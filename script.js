@@ -1,78 +1,125 @@
-// --- Navbar Scroll Effect ---
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+/**
+ * Academic Portfolio — Interactive Behavior
+ * Navigation, scroll reveal, active link tracking.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initMobileMenu();
+  initScrollReveal();
+  initActiveNavLink();
 });
 
-// --- Mobile Menu Toggle ---
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-});
+/* ── Navbar scroll effect ── */
+function initNavbar() {
+  const nav = document.getElementById('navbar');
+  if (!nav) return;
 
-// Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+  const handleScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  };
 
-// --- Scroll Reveal Animations ---
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+
+/* ── Mobile menu toggle ── */
+function initMobileMenu() {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
+
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => links.classList.remove('open'));
+  });
+}
+
+
+/* ── Scroll reveal animations ── */
+function initScrollReveal() {
+  const elements = document.querySelectorAll('.reveal');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
+      });
+    },
+    {
+      threshold: 0.06,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+}
+
+
+/* ── Active navigation link tracking ── */
+function initActiveNavLink() {
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const navAnchors = Array.from(document.querySelectorAll('.nav__links a'));
+  if (!sections.length || !navAnchors.length) return;
+
+  // Offset: nav height + a comfortable buffer so the "current" section
+  // becomes active once its top crosses this line
+  const OFFSET = 120;
+
+  const update = () => {
+    const scrollY = window.scrollY;
+
+    // Find the last section whose top has passed the offset line
+    let currentId = sections[0].id;
+    for (const section of sections) {
+      if (section.offsetTop - OFFSET <= scrollY) {
+        currentId = section.id;
+      } else {
+        break;
+      }
+    }
+
+    // Near-bottom edge case: force last section active
+    if (window.innerHeight + scrollY >= document.body.offsetHeight - 40) {
+      currentId = sections[sections.length - 1].id;
+    }
+
+    navAnchors.forEach(anchor => {
+      anchor.classList.toggle(
+        'active',
+        anchor.getAttribute('href') === '#' + currentId
+      );
     });
-}, { 
-    threshold: .06, 
-    rootMargin: '0px 0px -30px 0px' 
-});
+  };
 
-document.querySelectorAll('.reveal').forEach(el => {
-    revealObserver.observe(el);
-});
+  // Throttle via rAF for smooth performance
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
-// --- Staggered Project Cards Animation ---
-document.querySelectorAll('.project-card').forEach((card, index) => {
-    // Set initial state
-    card.style.cssText = 'opacity:0; transform:translateY(18px); transition:opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1)';
-    
-    // Create observer for staggered reveal
-    new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.transitionDelay = (index * 70) + 'ms';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { 
-        threshold: .04 
-    }).observe(card);
-});
-
-// --- Active Nav Link Highlighting ---
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navAnchors.forEach(a => {
-                // Highlight the link matching the current section's ID
-                if (a.getAttribute('href') === '#' + entry.target.id) {
-                    a.style.color = '#0b1a2b'; // Active state color
-                } else {
-                    a.style.color = ''; // Reset others
-                }
-            });
-        }
+  // Initial call + clear active state when clicking nav links
+  // (so the scroll handler can set it correctly after scroll completes)
+  update();
+  navAnchors.forEach(a => {
+    a.addEventListener('click', () => {
+      // Let scroll happen, then re-evaluate after scroll finishes
+      setTimeout(update, 700);
     });
-}, { 
-    threshold: .2 
-});
-
-sections.forEach(section => {
-    sectionObserver.observe(section);
-});
+  });
+}
